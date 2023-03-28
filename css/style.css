@@ -1,0 +1,64 @@
+body {
+    --pink: #DC1086;
+    --beige: #D08839;
+    --crimson: #B22D26;
+    --dark-red: #96211B;
+    --pale-blue: #EBF4FD;
+}
+
+#hero {
+    height: 720px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-blend-mode: multiply;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("../images/Artboard 1.png");
+} 
+
+#call-to-action {
+    background: var(--crimson);
+}
+
+#call-to-action-button {
+    background-color: var(--dark-red);
+}
+
+#billboard {
+    background-color: var(--pale-blue);
+}
+
+#inforgraphics-title {
+    color: var(--dark-red);
+}
+
+#inforgraphics-sub-title {
+    color: var(--crimson);
+}
+
+#inforgraphics-conclusion {
+    background: var(--pink);
+}
+
+#personalities {
+    background-color: var(--pale-blue);
+}
+
+#registration {
+    background: #000000;
+}
+
+#registration-button {
+    background: var(--dark-red);
+}
+
+footer {
+    background-size: cover;
+    background-position: bottom center;
+
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url("../images//Artboard\ 1\ copy\ 6.png");
+}
