@@ -1,9 +1,20 @@
+@font-face {
+    font-family: "Product Sans";
+    src: url('../fonts/Product\ Sans\ Regular.ttf') format('truetype'),
+        url('../fonts/Product\ Sans\ Bold.ttf') format('truetype'),
+        url('../fonts/ProductSans-Black.ttf') format('truetype'),
+        url('../fonts/ProductSans-Light.ttf') format('truetype'),
+        url('../fonts/ProductSans-Medium.ttf') format('truetype');
+}
+
 body {
     --pink: #DC1086;
     --beige: #D08839;
     --crimson: #B22D26;
     --dark-red: #96211B;
     --pale-blue: #EBF4FD;
+
+    font-family: "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 #hero {
