@@ -8,13 +8,30 @@
 }
 
 body {
-    --pink: #DC1086;
-    --beige: #D08839;
-    --crimson: #B22D26;
-    --dark-red: #96211B;
-    --pale-blue: #EBF4FD;
+    /* --pink: #DC1086; */
+    /* --beige: #D08839; */
+    /* --crimson: #B22D26; */
+    /* --dark-red: #96211B; */
+    --cornflower: #EBF4FD;
+    --crimson: #EC0C00;
 
     font-family: "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.crimson-text {
+    color: var(--crimson) !important;
+}
+
+.crimson-background {
+    background-color: var(--crimson) !important;
+}
+
+.cornflower-text {
+    color: var(--cornflower) !important;
+}
+
+.cornflower-background {
+    background-color: var(--cornflower) !important;
 }
 
 #hero {
@@ -29,28 +46,12 @@ body {
     background-image: url("../images/Artboard 1.png");
 } 
 
-#call-to-action {
-    background: var(--crimson);
-}
-
 #call-to-action-button {
     background-color: var(--dark-red);
 }
 
 #billboard {
     background-color: var(--pale-blue);
-}
-
-#inforgraphics-title {
-    color: var(--dark-red);
-}
-
-#inforgraphics-sub-title {
-    color: var(--crimson);
-}
-
-#inforgraphics-conclusion {
-    background: var(--pink);
 }
 
 #personalities {
