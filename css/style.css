@@ -14,8 +14,17 @@ body {
     /* --dark-red: #96211B; */
     --cornflower: #EBF4FD;
     --crimson: #EC0C00;
+    --gray: #F6F6F6;
 
     font-family: "Product Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.gray-text {
+    color: var(--gray) !important;
+}
+
+.gray-background {
+    background-color: var(--gray) !important;
 }
 
 .crimson-text {
