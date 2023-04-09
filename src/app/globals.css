@@ -79,14 +79,6 @@ body {
     background-color: var(--pale-blue);
 }
 
-#registration {
-    background: #000000;
-}
-
-#registration-button {
-    background: var(--dark-red);
-}
-
 footer {
     background-size: cover;
     background-position: bottom center;

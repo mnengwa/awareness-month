@@ -39,12 +39,12 @@ export const metadata = {
     },
     title: 'Sexual Assault Awareness Month',
     description: 'April is Sexual Assault Awareness Month, a time to raise awareness about sexual violence and educate our communities about prevention strategies.',
-}
+};
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body>{children}</body>
         </html>
-    )
+    );
 }
