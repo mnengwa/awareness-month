@@ -9,6 +9,7 @@
         "start": "next start"
     },
     "dependencies": {
+        "antd": "^5.4.0",
         "bootstrap": "^5.2.3",
         "eslint": "8.38.0",
         "eslint-config-next": "13.3.0",

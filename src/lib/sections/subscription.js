@@ -1,8 +1,11 @@
 "use client";
 
+import { message } from 'antd';
 import { useState } from "react";
 
 const Subscription = () => {
+    const [toast, _] = message.useMessage();
+    const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({name: '', email: '', phone: '', location: ''});
 
     const onInputChange = (event) => {
@@ -13,7 +16,31 @@ const Subscription = () => {
     const onKlaviyoMailSubscription = (event) => {
         event.preventDefault();
 
-        fetch("/api/subscribe", {});
+        const url = "/api/subscribe";
+
+        const init = {
+            method: "POST",
+            body: JSON.stringify(form),
+            headers: {accept: 'application/json', 'content-type': 'application/json'},
+        };
+
+        setLoading(true);
+
+        toast.loading("Creating subscription...");
+
+        fetch(url, init)
+            .then((resp) => resp.json())
+            .then((data) => {
+                if (data?.success) {
+                    setForm({name: '', email: '', phone: '', location: ''});
+                    toast.info(data?.message);
+                    return;
+                }
+
+                toast.warning(data?.message);
+            })
+            .catch((err) => console.log(err))
+            .finally(() => setLoading(false));
     };
 
     return <section id="subscription" style={{background: '#000000'}}>
@@ -35,27 +62,30 @@ const Subscription = () => {
             <form method="POST" onSubmit={onKlaviyoMailSubscription} className="d-flex justify-content-center">
                 <div className="row w-75 g-4">
                     <div className="col-12 col-lg-6">
-                        <input type="text" name="name" onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                        <input type="text" name="name" value={form?.name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                             placeholder="Name" />
                     </div>
 
                     <div className="col-12 col-lg-6">
-                        <input type="email" name="email" onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                        <input type="email" name="email" value={form?.email} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                             placeholder="Email" />
                     </div>
 
                     <div className="col-12 col-lg-6">
-                        <input type="tel" name="phone" onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                        <input type="tel" name="phone" value={form?.phone} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                             placeholder="Phone" />
                     </div>
 
                     <div className="col-12 col-lg-6">
-                        <input type="text" name="location" onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                        <input type="text" name="location" value={form?.location} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                             placeholder="Location (optional)" />
                     </div>
 
                     <div className="col-12 d-flex justify-content-center">
-                        <button type="submit" className="px-5 btn btn-lg crimson-background text-light rounded-1"
+                        <button 
+                            type="submit"
+                            disabled={loading}
+                            className="px-5 btn btn-lg crimson-background text-light rounded-1"
                         >Sign
                                 Up</button>
                     </div>
