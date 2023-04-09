@@ -1,7 +1,7 @@
 "use client";
 
-import { message } from 'antd';
 import { useState } from "react";
+import { Button, message } from 'antd';
 
 const Subscription = () => {
     const [toast, _] = message.useMessage();
@@ -25,8 +25,6 @@ const Subscription = () => {
         };
 
         setLoading(true);
-
-        toast.loading("Creating subscription...");
 
         fetch(url, init)
             .then((resp) => resp.json())
@@ -85,9 +83,11 @@ const Subscription = () => {
                         <button 
                             type="submit"
                             disabled={loading}
-                            className="px-5 btn btn-lg crimson-background text-light rounded-1"
-                        >Sign
-                                Up</button>
+                            style={{border: 'none', outline: 'none'}}
+                            className="px-5 btn btn-lg crimson-background text-light rounded-1">
+                            {loading ? <span className="me-3 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"/> : null}
+                                Sign Up
+                        </button>
                     </div>
                 </div>
             </form>
