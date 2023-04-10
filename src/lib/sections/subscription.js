@@ -52,65 +52,71 @@ const Subscription = () => {
                         pro, we
                         welcome you to
                         our community.</h1>
-
-                <h2 className="w-100 my-5 text-center crimson-text">
-                        Stay in the know with our Newsletter & learn more about physical, wellness & mental awareness
-                        and more!
-                </h2>
             </div>
 
-            <form method="POST" onSubmit={onKlaviyoMailSubscription} className="d-flex justify-content-center">
-                <div className="row w-75 g-4">
-                    <div className="col-12 col-lg-6">
-                        <input type="text" name="first_name" value={form?.first_name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="First name" />
-                    </div>
-                    
-                    <div className="col-12 col-lg-6">
-                        <input type="text" name="last_name" value={form?.last_name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Last name" />
-                    </div>
+            <div className="row my-5 g-4 g-md-5">
+                <div className="col-12 col-lg-7 col-xl-6">
+                    <h2 className="w-100 text-center crimson-text">
+                        Stay in the know with our newsletter!
+                    </h2>
 
-                    <div className="col-12 col-lg-6">
-                        <input type="email" name="email" value={form?.email} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Email address" />
-                    </div>
+                    <form method="POST" onSubmit={onKlaviyoMailSubscription} className="mt-3 d-flex justify-content-center">
+                        <div className="row w-100 g-4">
+                            <div className="col-12 col-md-6">
+                                <input type="text" name="first_name" value={form?.first_name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                                    placeholder="First name" />
+                            </div>
 
-                    <div className="col-12 col-lg-6">
-                        <input type="tel" name="phone_number" value={form?.phone_number} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Phone (optional)" />
-                    </div>
+                            <div className="col-12 col-md-6">
+                                <input type="text" name="last_name" value={form?.last_name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                                    placeholder="Last name" />
+                            </div>
 
-                    <div className="col-12">
-                        <input type="text" name="location" value={form?.location} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Location (optional)" />
-                    </div>
+                            <div className="col-12 col-lg-6">
+                                <input type="email" name="email" value={form?.email} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                                    placeholder="Email address" />
+                            </div>
 
-                    <div className="col-12 d-flex justify-content-center">
-                        <button 
-                            type="submit"
-                            disabled={loading}
-                            style={{border: 'none', outline: 'none'}}
-                            className="px-5 btn btn-lg crimson-background text-light rounded-1">
-                            {loading ? <span className="me-3 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"/> : null}
-                                Sign Up
-                        </button>
-                    </div>
+                            <div className="col-12 col-lg-6">
+                                <input type="tel" name="phone_number" value={form?.phone_number} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                                    placeholder="Phone (optional)" />
+                            </div>
+
+                            <div className="col-12">
+                                <input type="text" name="location" value={form?.location} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                                    placeholder="Location (optional)" />
+                            </div>
+
+                            <div className="col-12 d-flex justify-content-center">
+                                <button 
+                                    type="submit"
+                                    disabled={loading}
+                                    style={{border: 'none', outline: 'none'}}
+                                    className="px-5 btn btn-lg crimson-background text-light rounded-1">
+                                    {loading ? <span className="me-3 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"/> : null}
+                                    SUBSCRIBE
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+
+                <div className="col-12 col-lg-5 col-xl-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4820212215204!2d-74.44145858459586!3d40.68538057933474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ade63c6e571f%3A0xb617f304393d7b46!2sDefensiveFit%20-%20Combat%20Cross%20Training!5e0!3m2!1sen!2ske!4v1681149424109!5m2!1sen!2ske" 
+                        className='w-100 h-100 border-0 rounded' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
 
             <div className="row g-4 my-5">
+            
                 <div className="col-12">
-                    <h3 className="text-light text-center">Location: Defensive Fit | 425 Springfield Ave, Berkeley
-                            Heights,
-                            NJ
-                            07922</h3>
-
-                </div>
-
-                <div className="col-12">
-                    <h2 className="text-light text-center">Sign up now! Space is limited. Refreshments will be served.
-                    </h2>
+                    <a href="#call-to-action">
+                        <h2 className="text-light text-center" style={{lineHeight: 1.5}}>
+                            Click to sign-up now! Space is limited.
+                            <br/>
+                            Refreshments will be served.
+                        </h2>
+                    </a>
                 </div>
             </div>
         </div>
