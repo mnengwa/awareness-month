@@ -1,12 +1,12 @@
 "use client";
 
+import { message } from 'antd';
 import { useState } from "react";
-import { Button, message } from 'antd';
 
 const Subscription = () => {
-    const [toast, _] = message.useMessage();
     const [loading, setLoading] = useState(false);
-    const [form, setForm] = useState({name: '', email: '', phone: '', location: ''});
+    const [toast, toastContext] = message.useMessage();
+    const [form, setForm] = useState({first_name: '', last_name: '', email: '', phone_number: '', location: ''});
 
     const onInputChange = (event) => {
         event.preventDefault();
@@ -30,18 +30,20 @@ const Subscription = () => {
             .then((resp) => resp.json())
             .then((data) => {
                 if (data?.success) {
-                    setForm({name: '', email: '', phone: '', location: ''});
+                    setForm({first_name: '', last_name: '', email: '', phone_number: '', location: ''});
                     toast.info(data?.message);
                     return;
                 }
 
-                toast.warning(data?.message);
+                toast.error(data?.message);
             })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false));
     };
 
     return <section id="subscription" style={{background: '#000000'}}>
+        {toastContext}
+
         <div className="py-5 container">
             <div className="d-flex flex-column align-items-center">
                 <h1 className="w-75 text-light text-center bolden">Whether you&apos;re new to self-defense and fitness or
@@ -60,21 +62,26 @@ const Subscription = () => {
             <form method="POST" onSubmit={onKlaviyoMailSubscription} className="d-flex justify-content-center">
                 <div className="row w-75 g-4">
                     <div className="col-12 col-lg-6">
-                        <input type="text" name="name" value={form?.name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Name" />
+                        <input type="text" name="first_name" value={form?.first_name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                            placeholder="First name" />
+                    </div>
+                    
+                    <div className="col-12 col-lg-6">
+                        <input type="text" name="last_name" value={form?.last_name} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                            placeholder="Last name" />
                     </div>
 
                     <div className="col-12 col-lg-6">
                         <input type="email" name="email" value={form?.email} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Email" />
+                            placeholder="Email address" />
                     </div>
 
                     <div className="col-12 col-lg-6">
-                        <input type="tel" name="phone" value={form?.phone} onChange={onInputChange} className="form-control form-control-lg rounded-1"
+                        <input type="tel" name="phone_number" value={form?.phone_number} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                             placeholder="Phone" />
                     </div>
 
-                    <div className="col-12 col-lg-6">
+                    <div className="col-12">
                         <input type="text" name="location" value={form?.location} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                             placeholder="Location (optional)" />
                     </div>
