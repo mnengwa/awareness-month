@@ -78,7 +78,7 @@ const Subscription = () => {
 
                     <div className="col-12 col-lg-6">
                         <input type="tel" name="phone_number" value={form?.phone_number} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                            placeholder="Phone" />
+                            placeholder="Phone (optional)" />
                     </div>
 
                     <div className="col-12">

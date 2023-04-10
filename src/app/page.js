@@ -191,7 +191,7 @@ export default function Index() {
 
                             <div className="d-flex flex-column align-items-center justify-content-center">
                                 <h2 className="mt-3 text-dark bolden">Vicki</h2>
-                                <h5 className="text-dark">A coach and entrepreneur who can help you achieve a fulfilling and
+                                <h5 className="text-dark text-center">A coach and entrepreneur who can help you achieve a fulfilling and
                                     balanced life. Juggling multiple responsibilities can
                                     be challenging, but navigating obstacles defines our success.</h5>
 
