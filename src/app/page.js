@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Subscription from "@/lib/sections/subscription";
+import Registration from '@/lib/sections/registration';
 import {Twitter, Instagram, Facebook, Youtube, Tiktok, Website} from "@/lib/icons";
 
 export default function Index() {
@@ -33,9 +34,7 @@ export default function Index() {
                             </p>
 
                             <div className="p-5 pt-0 pe-0 gap-4 d-flex flex-wrap">
-                                <a href="" className="btn btn-lg bg-black text-light">Register for 10 AM classes</a>
-
-                                <a href="" className="btn btn-lg bg-black text-light">Register for 11 AM classes</a>
+                                <a href="#call-to-action" className="btn btn-lg bg-black text-light">REGISTER NOW!</a>
                             </div>
 
                             <p className="p-5 pt-0 lead">
@@ -98,25 +97,7 @@ export default function Index() {
             </div>
         </main>
 
-        <div id="call-to-action" className="crimson-background">
-            <div className="py-5 container">
-                <h2 className="mb-5 text-light text-center">
-                    One important way to stay safe and reduce the risk of assault is to learn self-defense techniques
-                    and develop physical
-                    and mental strength.
-                </h2>
-
-                <div className="p-5 pt-0 pe-0 gap-4 d-flex flex-wrap justify-content-center">
-                    <a href="" className="btn btn-lg bg-black text-light">Register for 10 AM classes</a>
-
-                    <a href="" className="btn btn-lg bg-black text-light">Register for 11 AM classes</a>
-                </div>
-
-                <p className="lead text-light text-center">
-                    <strong>Location</strong>: Defensive Fit | 425 Springfield Ave, Berkeley Heights, NJ 07922
-                </p>
-            </div>
-        </div>
+        <Registration/>
 
         <section id="personalities" className="gray-background">
             <div className="py-5 container">
