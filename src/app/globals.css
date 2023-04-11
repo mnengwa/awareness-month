@@ -67,10 +67,6 @@ body {
     background-image: url("/images/Artboard 1.png");
 }
 
-#call-to-action-button {
-    background-color: var(--dark-red);
-}
-
 #billboard {
     background-color: var(--pale-blue);
 }

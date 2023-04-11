@@ -54,10 +54,10 @@ const Subscription = () => {
                         our community.</h1>
             </div>
 
-            <div className="row my-5 g-4 g-md-5">
-                <div className="col-12 col-lg-7 col-xl-6">
+            <div className="row my-3 g-4 g-md-5">
+                <div className="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                     <h2 className="w-100 text-center crimson-text">
-                        Stay in the know with our newsletter!
+                        Stay in the know!
                     </h2>
 
                     <form method="POST" onSubmit={onKlaviyoMailSubscription} className="mt-3 d-flex justify-content-center">
@@ -99,24 +99,6 @@ const Subscription = () => {
                             </div>
                         </div>
                     </form>
-                </div>
-
-                <div className="col-12 col-lg-5 col-xl-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.4820212215204!2d-74.44145858459586!3d40.68538057933474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ade63c6e571f%3A0xb617f304393d7b46!2sDefensiveFit%20-%20Combat%20Cross%20Training!5e0!3m2!1sen!2ske!4v1681149424109!5m2!1sen!2ske" 
-                        className='w-100 h-100 border-0 rounded' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-
-            <div className="row g-4 my-5">
-            
-                <div className="col-12">
-                    <a href="#call-to-action">
-                        <h2 className="text-light text-center" style={{lineHeight: 1.5}}>
-                            Click to sign-up now! Space is limited.
-                            <br/>
-                            Refreshments will be served.
-                        </h2>
-                    </a>
                 </div>
             </div>
         </div>

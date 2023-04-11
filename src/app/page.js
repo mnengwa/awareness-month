@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import Subscription from "@/lib/sections/subscription";
-import Registration from '@/lib/sections/registration';
+import CallToAction from '@/lib/sections/call-to-action';
+import StreetLocation from '@/lib/sections/street-location';
 import {Twitter, Instagram, Facebook, Youtube, Tiktok, Website} from "@/lib/icons";
 
 export default function Index() {
@@ -18,39 +19,7 @@ export default function Index() {
             </div>
         </div>
 
-        <header id="billboard" className="gray-background">
-            <div className="py-5 container">
-                <div className="row">
-                    <div className="col-12 col-md-6 col-lg-7">
-                        <div className="w-100 h-100 d-flex flex-column">
-                            <p className="p-5 pb-0 lead text-dark">
-                                April is Sexual Assault Awareness Month, a time to raise awareness about sexual violence
-                                and educate our communities
-                                about prevention strategies.
-                            </p>
-
-                            <p className="p-5 pt-0 lead">
-                                Join us on April 29th for a FREE workout class and self-defense lesson!
-                            </p>
-
-                            <div className="p-5 pt-0 pe-0 gap-4 d-flex flex-wrap">
-                                <a href="#call-to-action" className="btn btn-lg bg-black text-light">REGISTER NOW!</a>
-                            </div>
-
-                            <p className="p-5 pt-0 lead">
-                                <strong style={{fontWeight: "bold"}}>Location</strong>: Defensive Fit | 425 Springfield
-                                Ave, Berkeley Heights, NJ
-                                07922
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center">
-                        <img className="img-fluid rounded-2" src="images/Sexual-Assault-Month 1.png"
-                            alt="Empower emotional, mental, physical wellness & resiliance" />
-                    </div>
-                </div>
-            </div>
-        </header>
+        <CallToAction/>
 
         <main id="infographics">
             <div className="py-5 container">
@@ -97,7 +66,7 @@ export default function Index() {
             </div>
         </main>
 
-        <Registration/>
+        <StreetLocation/>
 
         <section id="personalities" className="gray-background">
             <div className="py-5 container">
