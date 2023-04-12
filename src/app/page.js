@@ -77,7 +77,7 @@ export default function Index() {
                 <div className="my-3 row">
                     <div className="col-12 col-md-8 offset-md-2">
                         <p className="lead text-center">
-                            We&apos;re partnering to empower you holistically and prevent assault. We&apos;ll equip you with
+                            We're partnering to empower you holistically and prevent assault. We'll equip you with
                             knowledge and
                             tools to promote
                             self-protection and well-being.
