@@ -2,16 +2,34 @@
 
 import { message } from 'antd';
 import { useState } from "react";
+// import { message, Space, Checkbox, Divider } from 'antd';
 
 const Subscription = () => {
     const [loading, setLoading] = useState(false);
     const [toast, toastContext] = message.useMessage();
+    // const [subscriptions, setSubscriptions] = useState([]);
+    // const [fullSubscription, setFullSubscription] = useState(false);
+    // const [partialSubscription, setPartialSubscription] = useState(true);
     const [form, setForm] = useState({first_name: '', last_name: '', email: '', phone_number: '', location: ''});
+
+    // const SEGMENTS = (process.env.NEXT_PUBLIC_KLAVIYO_SUBSCRIPTION_SEGMENTS ?? '').split(",");
 
     const onInputChange = (event) => {
         event.preventDefault();
         setForm({...form, [event.target.name] : event.target.value});
     };
+
+    // const onSubscribeAllChange = (e) => {
+    //     setSubscriptions(e.target.checked ? plainOptions : []);
+    //     setSubscribeAll(e.target.checked);
+    //     setPartialSubscription(false);
+    // };
+
+    // const onSubscriptionChange = (list) => {
+    //     setSubscriptions(list);
+    //     setFullSubscription(list.length === SEGMENTS.length);
+    //     setPartialSubscription(!!list.length && list.length < SEGMENTS.length);
+    // };
     
     const onKlaviyoMailSubscription = (event) => {
         event.preventDefault();
@@ -86,6 +104,16 @@ const Subscription = () => {
                                 <input type="text" name="location" value={form?.location} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                                     placeholder="Location (optional)" />
                             </div>
+
+                            {/* <div className='col-12'>
+                                <Space size="large" split={<Divider type="vertical" style={{borderColor: "var(--crimson)"}}/>}>
+                                    <Checkbox className="text-light" indeterminate={partialSubscription} onChange={onSubscribeAllChange} checked={fullSubscription}>
+                                        Get all
+                                    </Checkbox>
+
+                                    <Checkbox.Group className="text-light" options={SEGMENTS} value={subscriptions} onChange={onSubscriptionChange} />
+                                </Space>
+                            </div> */}
 
                             <div className="col-12 d-flex justify-content-center">
                                 <button 
