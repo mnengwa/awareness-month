@@ -9,7 +9,7 @@ import {Twitter, Instagram, Facebook, Youtube, Tiktok, Website} from "@/lib/icon
 export default function Index() {
     return <Fragment>
         <div id="hero" className="w-100 position-relative">
-            <img className="mt-4 ms-5 img-fluid position-absolute" width="200" src="images/logo.png"
+            <img className="mt-4 ms-5 img-fluid position-absolute" width={200} src="images/EMPWR-LOGO.svg"
                 alt="Empower emotional, mental, physical wellness & resiliance" />
 
             <div id="hero-content"
@@ -99,10 +99,10 @@ export default function Index() {
 
                             <div className="d-flex flex-column align-items-center justify-content-center">
                                 <h2 className="mt-3 text-dark bolden">Andre Tosado</h2>
-                                <h5 className="text-dark text-center">With 20+ years in martial arts and fitness, Andre
+                                <h6 className="text-dark text-center">With 20+ years in martial arts and fitness, Andre
                                     coaches
                                     self-defense in his business at Berkeley Heights, NJ. Trained
-                                    in Boxing, Jeet Kune Do, and Filipino Martial Arts.</h5>
+                                    in Boxing, Jeet Kune Do, and Filipino Martial Arts.</h6>
 
                                 <div className="mt-3 gap-3 d-flex justify-content-center">
                                     <a className="crimson-text" href="https://www.facebook.com/defensivefit/"
@@ -136,10 +136,10 @@ export default function Index() {
 
                             <div className="d-flex flex-column align-items-center justify-content-center">
                                 <h2 className="mt-3 text-dark bolden">Valerie Flax</h2>
-                                <h5 className="text-dark text-center">A NASM-certified fitness instructor since 2016. Owns
+                                <h6 className="text-dark text-center">A NASM-certified fitness instructor since 2016. Owns
                                     The Goodburn
                                     fitness business, specializes in circuit training,
-                                    barre, and boxing to enhance clients' fitness.</h5>
+                                    barre, and boxing to enhance clients' fitness.</h6>
 
                                 <div className="mt-3 gap-3 d-flex justify-content-center">
 
@@ -162,10 +162,10 @@ export default function Index() {
                             <img className="img-fluid rounded-1" src="images/Vicki D.png" alt="Vicki" />
 
                             <div className="d-flex flex-column align-items-center justify-content-center">
-                                <h2 className="mt-3 text-dark bolden">Vicki</h2>
-                                <h5 className="text-dark text-center">A coach and entrepreneur who can help you achieve a fulfilling and
+                                <h2 className="mt-3 text-dark bolden">Vicki D</h2>
+                                <h6 className="text-dark text-center">A coach and entrepreneur who can help you achieve a fulfilling and
                                     balanced life. Juggling multiple responsibilities can
-                                    be challenging, but navigating obstacles defines our success.</h5>
+                                    be challenging, but navigating obstacles defines our success.</h6>
 
                                 <div className="mt-3 gap-3 d-flex justify-content-center">
 
