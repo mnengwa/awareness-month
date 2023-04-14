@@ -1,36 +1,20 @@
+/* eslint-disable react/no-unescaped-entities */
+
 "use client";
 
 import { message } from 'antd';
 import { useState } from "react";
-// import { message, Space, Checkbox, Divider } from 'antd';
 
 const Subscription = () => {
     const [loading, setLoading] = useState(false);
     const [toast, toastContext] = message.useMessage();
-    // const [subscriptions, setSubscriptions] = useState([]);
-    // const [fullSubscription, setFullSubscription] = useState(false);
-    // const [partialSubscription, setPartialSubscription] = useState(true);
-    const [form, setForm] = useState({first_name: '', last_name: '', email: '', phone_number: '', location: ''});
-
-    // const SEGMENTS = (process.env.NEXT_PUBLIC_KLAVIYO_SUBSCRIPTION_SEGMENTS ?? '').split(",");
+    const [form, setForm] = useState({first_name: '', last_name: '', email: '', location: ''});
 
     const onInputChange = (event) => {
         event.preventDefault();
         setForm({...form, [event.target.name] : event.target.value});
     };
 
-    // const onSubscribeAllChange = (e) => {
-    //     setSubscriptions(e.target.checked ? plainOptions : []);
-    //     setSubscribeAll(e.target.checked);
-    //     setPartialSubscription(false);
-    // };
-
-    // const onSubscriptionChange = (list) => {
-    //     setSubscriptions(list);
-    //     setFullSubscription(list.length === SEGMENTS.length);
-    //     setPartialSubscription(!!list.length && list.length < SEGMENTS.length);
-    // };
-    
     const onKlaviyoMailSubscription = (event) => {
         event.preventDefault();
 
@@ -48,7 +32,7 @@ const Subscription = () => {
             .then((resp) => resp.json())
             .then((data) => {
                 if (data?.success) {
-                    setForm({first_name: '', last_name: '', email: '', phone_number: '', location: ''});
+                    setForm({first_name: '', last_name: '', email: '', location: ''});
                     toast.info(data?.message);
                     return;
                 }
@@ -64,8 +48,8 @@ const Subscription = () => {
 
         <div className="py-5 container">
             <div className="d-flex flex-column align-items-center">
-                <h1 className="w-75 text-light text-center bolden">Whether you&apos;re new to self-defense and fitness or
-                        you&apos;re a
+                <h1 className="w-75 text-light text-center bolden">Whether you're new to self-defense and fitness or
+                        you're a
                         seasoned
                         pro, we
                         welcome you to
@@ -96,24 +80,9 @@ const Subscription = () => {
                             </div>
 
                             <div className="col-12 col-lg-6">
-                                <input type="tel" name="phone_number" value={form?.phone_number} onChange={onInputChange} className="form-control form-control-lg rounded-1"
-                                    placeholder="Phone (optional)" />
-                            </div>
-
-                            <div className="col-12">
                                 <input type="text" name="location" value={form?.location} onChange={onInputChange} className="form-control form-control-lg rounded-1"
                                     placeholder="Location (optional)" />
                             </div>
-
-                            {/* <div className='col-12'>
-                                <Space size="large" split={<Divider type="vertical" style={{borderColor: "var(--crimson)"}}/>}>
-                                    <Checkbox className="text-light" indeterminate={partialSubscription} onChange={onSubscribeAllChange} checked={fullSubscription}>
-                                        Get all
-                                    </Checkbox>
-
-                                    <Checkbox.Group className="text-light" options={SEGMENTS} value={subscriptions} onChange={onSubscriptionChange} />
-                                </Space>
-                            </div> */}
 
                             <div className="col-12 d-flex justify-content-center">
                                 <button 

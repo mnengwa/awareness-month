@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 const StreetLocation = () => {
 
     return <div id="street-location" className="crimson-background">

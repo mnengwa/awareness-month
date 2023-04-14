@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import { Fragment } from 'react';
 import Subscription from "@/lib/sections/subscription";
 import CallToAction from '@/lib/sections/call-to-action';
@@ -55,7 +57,7 @@ export default function Index() {
                     <div className="mt-2 col-12 col-md-6 col-lg-4">
                         <img className="w-75 img-fluid" src="images/1-of-4.png" />
                         <p className="lead">Almost one in four undergraduate women experienced sexual assault or misconduct
-                            at 33 of the nation&apos;s major universities</p>
+                            at 33 of the nation's major universities</p>
                     </div>
                     <div className="mt-2 col-12 col-md-6 col-lg-4">
                         <img className="w-75 img-fluid" src="images/51.1-pc.png" />
@@ -137,7 +139,7 @@ export default function Index() {
                                 <h5 className="text-dark text-center">A NASM-certified fitness instructor since 2016. Owns
                                     The Goodburn
                                     fitness business, specializes in circuit training,
-                                    barre, and boxing to enhance clients&apos; fitness.</h5>
+                                    barre, and boxing to enhance clients' fitness.</h5>
 
                                 <div className="mt-3 gap-3 d-flex justify-content-center">
 

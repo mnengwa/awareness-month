@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { message } from 'antd';
@@ -56,6 +57,7 @@ const CallToAction = () => {
     };
 
     return <header id="billboard" className="gray-background">
+        {toastContext}
         <div className="py-5 container">
             <div className="row">
                 <div className="col-12 col-md-12 col-lg-7">
@@ -67,7 +69,7 @@ const CallToAction = () => {
                         </p>
 
                         <p className="p-5 pt-0 pb-3 lead text-dark">
-                            Join us on April 29th at 10 a.m. or 11 a.m. for a FREE session where we&amp;ll cover self-defense techniques, get a quick physical fitness lesson, and engage in mindfulness and mental wellness.
+                            Join us on April 29th at 10 a.m. or 11 a.m. for a FREE session where we'll cover self-defense techniques, get a quick physical fitness lesson, and engage in mindfulness and mental wellness.
                         </p>
 
                         <p className="p-5 pt-0 pb-3 lead text-dark">
