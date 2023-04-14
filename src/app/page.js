@@ -7,7 +7,7 @@ import {Twitter, Instagram, Facebook, Youtube, Tiktok, Website} from "@/lib/icon
 export default function Index() {
     return <Fragment>
         <div id="hero" className="w-100 position-relative">
-            <img className="mt-4 ms-5 img-fluid position-absolute" width="100" src="images/logo.png"
+            <img className="mt-4 ms-5 img-fluid position-absolute" width="200" src="images/logo.png"
                 alt="Empower emotional, mental, physical wellness & resiliance" />
 
             <div id="hero-content"
@@ -77,6 +77,7 @@ export default function Index() {
                 <div className="my-3 row">
                     <div className="col-12 col-md-8 offset-md-2">
                         <p className="lead text-center">
+                            {/* eslint-disable-next-line react/no-unescaped-entities */}
                             We're partnering to empower you holistically and prevent assault. We'll equip you with
                             knowledge and
                             tools to promote

@@ -76,7 +76,7 @@ const CallToAction = () => {
 
 
                         <div className='d-flex flex-column align-items-center'>
-                            <h2 className='bolden text-center crimson-text'>Sign-up today!</h2>
+                            <h2 className='bolden text-center crimson-text'>Sign up today!</h2>
                             <hr className='w-25 text-center' />
                         </div>
 
@@ -94,11 +94,11 @@ const CallToAction = () => {
                             <div className='col-12 col-md-8 offset-md-2'>
                                 <div className="row">
                                     <div className='col-6 col-lg-6'>
-                                        <Button slot={10} title="10 AM classes" onClick={onRegistrationRequest}/>
+                                        <Button slot={10} title="Sign me up for the 10AM event" onClick={onRegistrationRequest}/>
                                     </div>
 
                                     <div className='col-6 col-lg-6 d-flex justify-content-end'>
-                                        <Button slot={11} title="11 AM classes" onClick={onRegistrationRequest}/>
+                                        <Button slot={11} title="Sign me up for the 11AM event!" onClick={onRegistrationRequest}/>
                                     </div>
                                 </div>
                             </div>
