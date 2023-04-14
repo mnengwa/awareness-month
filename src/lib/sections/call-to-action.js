@@ -100,7 +100,7 @@ const CallToAction = () => {
                                     </div>
 
                                     <div className='col-6 col-lg-6 d-flex justify-content-end'>
-                                        <Button slot={11} title="Sign me up for the 11AM event!" onClick={onRegistrationRequest}/>
+                                        <Button slot={11} title="Sign me up for the 11AM event" onClick={onRegistrationRequest}/>
                                     </div>
                                 </div>
                             </div>
